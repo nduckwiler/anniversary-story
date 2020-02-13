@@ -67,18 +67,21 @@ h1 {
   grid-template-areas: "left right";
 }
 
-img {
-  width: 12.5%;
-}
-
-img#temp {
+.image-container div.animation-container.left {
   grid-area: left;
   justify-self: end;
   align-self: center;
+  text-align: right;
 }
 
-img#temp2 {
+.image-container div.animation-container.right {
   grid-area: right;
   justify-self: start;
   align-self: center;
+  text-align: left;
+
+}
+
+img {
+  width: 12.5%;
 }

@@ -18,15 +18,23 @@
 	<div class="section active" id="section0">
     <h1>fullPage.js</h1>
     <div class="image-container">
-      <img id="temp" class="animated slideInLeft" data-src="assets/temp.png"  alt="temp1"/>
-      <img id="temp2" class="animated slideInRight" data-src="assets/temp2.png"  alt="temp2"/>
+      <div class="animation-container animated fadeIn left">
+        <img id="temp" class="animated slideInLeft" data-src="assets/temp.png"  alt="temp1"/>
+      </div>
+      <div class="animation-container animated fadeIn right">
+        <img id="temp2" class="animated slideInRight" data-src="assets/temp2.png"  alt="temp2"/>
+      </div>
     </div>
   </div>
 	<div class="section" id="section1">
     <h1>Second</h1>
     <div class="image-container">
-      <img id="temp" class="animated slideInLeft" data-src="assets/temp.png"  alt="temp1"/>
-      <img id="temp2" class="animated slideInRight" data-src="assets/temp2.png"  alt="temp2"/>
+      <div class="animation-container animated">
+        <img id="temp" class="animated slideInLeft" data-src="assets/temp.png"  alt="temp1"/>
+      </div>
+      <div class="animation-container animated fadeIn">
+        <img id="temp2" class="animated slideInRight fadeIn" data-src="assets/temp2.png"  alt="temp2"/>
+      </div>
     </div>
   </div>
   <div class="section"><h1>Third</h1></div>
@@ -42,6 +50,19 @@
     sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
     navigation: true,
     navigationPosition: 'right',
+    afterLoad: function(origin, destination, direction) {
+      console.log("afterLoad!!");
+
+      var $isAnimatedSecond = document.querySelector('#section1 .animation-container');
+      console.log($isAnimatedSecond);
+      console.log(destination.index);
+ 
+      /* this code is part of the onLeave callback */   
+      if( destination.index == 1 ) {
+        $isAnimatedSecond.classList.add("fadeIn");
+        // $isAnimatedSecond.eq(0).css('animation-delay', '.3s');
+       }
+    }
 
 	});
 </script>
