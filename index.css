@@ -59,6 +59,10 @@ img {
   width: 12.5%;
 }
 
+.bottom-container .tree {
+  width: 20%;
+}
+
 div.invisible {
   opacity: 0%
 }
@@ -70,12 +74,41 @@ div.invisible {
   justify-content: center;
 }
 
-.flex-container img.left {
+/* .flex-container img.left,
+.middle-container img.left, */
+img.left {
   float: right;
 }
 
-.flex-container img.right {
+/* .flex-container img.right,
+.middle-container img.right, */
+img.right {
   float: left;
+}
+
+.middle-container {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-container, .bottom-container {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.top-container {
+  align-items: flex-end;
+}
+
+.bottom-container {
+  align-items: flex-start;
+}
+
+.big-space {
+  width: 15%;
 }
 
 img.left.distant {

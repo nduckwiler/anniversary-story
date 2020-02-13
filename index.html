@@ -83,7 +83,17 @@
   </div>
   <div class="section" id="section4">
     <h1>Fifth</h1>
-    <div class="flex-container">
+    <div class="top-container animated invisible">
+      <div>
+        <img class="left tree animated" data-src="assets/palm-tree.png"  alt="palm-tree"/>
+      </div>
+      <div class="big-spacer">
+      </div>
+      <div>
+        <img class="right tree animated" data-src="assets/palm-tree.png"  alt="palm-tree"/>
+      </div>
+    </div>
+    <div class="middle-container animated invisible">
       <div class="outer animated">
         <div class="inner animated">
           <img class="left fox animated" data-src="assets/fox-right.png"  alt="fox-right"/>
@@ -93,6 +103,17 @@
         <div class="inner animated">
           <img class="right fawn animated" data-src="assets/fawn-left.png"  alt="fawn-left"/>
         </div>
+      </div>
+    </div>
+    <div class="bottom-container animated invisible">
+      <div>
+        <img class="left tree animated" data-src="assets/palm-tree.png"  alt="palm-tree"/>
+      </div>
+      <div>
+        <img class="tree animated" data-src="assets/palm-tree.png"  alt="palm-tree"/>
+      </div>
+      <div>
+        <img class="right tree animated" data-src="assets/palm-tree.png"  alt="palm-tree"/>
       </div>
     </div>
   </div>
@@ -196,6 +217,16 @@
         var $imgs = document.querySelectorAll('.section.active img');
         $imgs.forEach(function(elem, index) {
           elem.classList.add('sliding');
+        });
+      }
+
+      // Final - upon enter
+      if (destination.index == 4) {
+        var $divs = document.querySelectorAll('.section .top-container, .section .middle-container, .section .bottom-container');
+        $divs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
+          elem.classList.add('fadeIn');
+          elem.classList.add('fast');
         });
       }
     }
