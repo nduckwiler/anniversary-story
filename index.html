@@ -68,6 +68,12 @@
   
   <div class="section" id="section3">
     <h1>Fourth</h1>
+    <div class="building-container invisible">
+      <div>
+        <img class="skyscraper animated" data-src="assets/skyscraper.png"  alt="skyscraper"/>
+        <!-- <img class="skyscraper animated" data-src="assets/skyscraper.png"  alt="skyscraper"/> -->
+      </div>
+    </div>
     <div class="flex-container">
       <div class="outer animated">
         <div class="inner animated">
@@ -220,6 +226,61 @@
         });
       }
 
+      // "Traveled...secrets" - upon exit
+      if (origin.index == 2) {
+        var $outerDivs = document.querySelectorAll('#section2 .outer');
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.add('invisible');
+          elem.classList.remove('fadeIn');
+          elem.classList.remove('faster');
+        });
+
+        var $imgs = document.querySelectorAll('#section2 img');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.remove('sliding');
+        });
+      }
+
+      // "leave the city" - upon enter
+      if (destination.index == 3) {
+        var $outerDivs = document.querySelectorAll('.section.active .building-container');
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
+          elem.classList.add('fadeIn');
+          elem.classList.add('faster');
+        });
+
+        var $buildings = document.querySelectorAll('.section.active .building-container img');
+        $buildings.forEach(function(elem, index) {
+          elem.classList.add('approach-and-left');
+        });
+
+        var $imgs = document.querySelectorAll('.section.active .flex-container img');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.add('shake-and-left');
+        });
+      }
+
+      // "leave the city" - upon exit
+      if (origin.index == 3) {
+        var $outerDivs = document.querySelectorAll('#section3 .building-container');
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.add('invisible');
+          elem.classList.remove('fadeIn');
+          elem.classList.remove('faster');
+        });
+
+        var $buildings = document.querySelectorAll('#section3 .building-container img');
+        $buildings.forEach(function(elem, index) {
+          elem.classList.remove('approach-and-left');
+        });
+
+        var $imgs = document.querySelectorAll('#section3 .flex-container img');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.remove('shake-and-left');
+        });
+      }
+
       // Final - upon enter
       if (destination.index == 4) {
         var $divs = document.querySelectorAll('.section .top-container, .section .middle-container, .section .bottom-container');
@@ -228,6 +289,16 @@
           elem.classList.add('fadeIn');
           elem.classList.add('fast');
         });
+
+        var $imgs = document.querySelectorAll('.section.active img.tree');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
+          elem.classList.add('shake');
+          elem.classList.add('slower');
+          elem.classList.add('infinite');
+        });
+
+
       }
     }
 	});
