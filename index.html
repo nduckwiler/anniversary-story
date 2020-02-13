@@ -10,6 +10,7 @@
 
   <!-- <link rel="stylesheet" type="text/css" href="../dist/fullpage.css" /> -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 <body>
@@ -17,33 +18,88 @@
 <div id="fullpage">
 	<div class="section active" id="section0">
     <h1>fullPage.js</h1>
-    <div class="image-container">
-      <div class="animation-container animated fadeIn left">
-        <img id="temp" class="animated slideInLeft" data-src="assets/temp.png"  alt="temp1"/>
+    <div class="flex-container">
+      <div class="outer animated">
+        <div class="inner animated">
+          <img id="temp" class="left animated" data-src="assets/temp.png"  alt="temp1"/>
+        </div>
       </div>
-      <div class="animation-container animated fadeIn right">
-        <img id="temp2" class="animated slideInRight" data-src="assets/temp2.png"  alt="temp2"/>
+      <div class="outer animated">
+        <div class="inner animated">
+          <img id="temp2" class="right animated" data-src="assets/temp2.png"  alt="temp2"/>
+        </div>
       </div>
     </div>
   </div>
 	<div class="section" id="section1">
     <h1>Second</h1>
-    <div class="image-container">
-      <div class="animation-container animated">
-        <img id="temp" class="animated slideInLeft" data-src="assets/temp.png"  alt="temp1"/>
+    <div class="flex-container">
+      <div class="outer animated">
+        <div class="inner animated">
+          <img id="temp" class="left animated" data-src="assets/temp.png"  alt="temp1"/>
+        </div>
       </div>
-      <div class="animation-container animated fadeIn">
-        <img id="temp2" class="animated slideInRight fadeIn" data-src="assets/temp2.png"  alt="temp2"/>
+      <div class="outer animated">
+        <div class="inner animated">
+          <img id="temp2" class="right animated" data-src="assets/temp2.png"  alt="temp2"/>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="section" id="section2">
+    <h1>Third</h1>
+    <div class="flex-container">
+      <div class="outer animated">
+        <div class="inner animated">
+          <img id="temp" class="left animated" data-src="assets/temp.png"  alt="temp1"/>
+        </div>
+      </div>
+      <div class="outer animated">
+        <div class="inner animated">
+          <img id="temp2" class="right animated" data-src="assets/temp2.png"  alt="temp2"/>
+        </div>
       </div>
     </div>
   </div>
-  <div class="section"><h1>Third</h1></div>
-  <div class="section"><h1>Fourth</h1></div>
-  <div class="section"><h1>Fifth</h1></div>
+  
+  <div class="section" id="section3">
+    <h1>Fourth</h1>
+    <div class="flex-container">
+      <div class="outer animated">
+        <div class="inner animated">
+          <img id="temp" class="left animated" data-src="assets/temp.png"  alt="temp1"/>
+        </div>
+      </div>
+      <div class="outer animated">
+        <div class="inner animated">
+          <img id="temp2" class="right animated" data-src="assets/temp2.png"  alt="temp2"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="section4">
+    <h1>Fifth</h1>
+    <div class="flex-container">
+      <div class="outer animated">
+        <div class="inner animated">
+          <img id="temp" class="left animated" data-src="assets/temp.png"  alt="temp1"/>
+        </div>
+      </div>
+      <div class="outer animated">
+        <div class="inner animated">
+          <img id="temp2" class="right animated" data-src="assets/temp2.png"  alt="temp2"/>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.extensions.min.js"></script> -->
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/easings.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
 <script type="text/javascript">
 	var myFullpage = new fullpage('#fullpage', {
@@ -51,19 +107,29 @@
     navigation: true,
     navigationPosition: 'right',
     afterLoad: function(origin, destination, direction) {
-      console.log("afterLoad!!");
-
-      var $isAnimatedSecond = document.querySelector('#section1 .animation-container');
-      console.log($isAnimatedSecond);
-      console.log(destination.index);
+      console.log("afterLoad() called!");
+      console.log(`origin.index: ${origin.index}`)
+      console.log(`destination.index: ${destination.index}`);
  
-      /* this code is part of the onLeave callback */   
       if( destination.index == 1 ) {
-        $isAnimatedSecond.classList.add("fadeIn");
-        // $isAnimatedSecond.eq(0).css('animation-delay', '.3s');
+        var $outerDivs = document.querySelectorAll('.section.active .outer');
+       }
+
+       if (destination.index == 4) {
+         var $outerDivs = document.querySelectorAll('.section.active .outer');
+         console.log('elements:')
+         $outerDivs.forEach(function(elem, index) {
+           elem.classList.add('fadeIn');
+         });
+       }
+
+       if (origin.index == 4) {
+         var $outerDivs = document.querySelectorAll('#section4 .outer');
+         $outerDivs.forEach(function(elem, index) {
+           elem.classList.remove('fadeIn');
+         })
        }
     }
-
 	});
 </script>
 </body>

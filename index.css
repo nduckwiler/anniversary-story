@@ -55,33 +55,21 @@ h1 {
   top: 30%;
 }
 
-.image-container {
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: "left right";
-}
-
-.image-container div.animation-container.left {
-  grid-area: left;
-  justify-self: end;
-  align-self: center;
-  text-align: right;
-}
-
-.image-container div.animation-container.right {
-  grid-area: right;
-  justify-self: start;
-  align-self: center;
-  text-align: left;
-
-}
-
 img {
   width: 12.5%;
+}
+
+.flex-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-container img.left {
+  float: right;
+}
+
+.flex-container img.right {
+  float: left;
 }
