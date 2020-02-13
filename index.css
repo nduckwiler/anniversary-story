@@ -55,29 +55,172 @@ h1 {
   top: 30%;
 }
 
-.image-container {
-  top: 0;
-  left: 0;
-  height: 100%;
-  position: absolute;
-  display: grid;
-  grid-template-rows: 100%;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: "left right";
-}
-
 img {
   width: 12.5%;
 }
 
-img#temp {
-  grid-area: left;
-  justify-self: end;
-  align-self: center;
+div.invisible {
+  opacity: 0%
 }
 
-img#temp2 {
-  grid-area: right;
-  justify-self: start;
-  align-self: center;
+.bottom-container .tree {
+  width: 20%;
 }
+
+.flex-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .flex-container img.left,
+.middle-container img.left, */
+img.left {
+  float: right;
+}
+
+/* .flex-container img.right,
+.middle-container img.right, */
+img.right {
+  float: left;
+}
+
+.building-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.building-container div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Start: for last section */
+.middle-container {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-container, .bottom-container {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.top-container {
+  align-items: flex-end;
+}
+
+.bottom-container {
+  align-items: flex-start;
+}
+
+.big-space {
+  width: 15%;
+}
+/* End: for last section */
+
+img.left.distant {
+  transform: translate(-5rem);
+}
+
+img.left.near {
+  transform: translate(-2rem);
+}
+
+img.right.distant {
+  transform: translate(5rem);
+}
+
+img.right.near {
+  transform: translate(2rem);
+}
+
+.sliding {
+  animation-name: slide-back-and-forth;
+  animation-duration: 3s;
+}
+
+@keyframes slide-back-and-forth {
+  /* swing back and forth */
+  0% { transform:  translate(-6rem) rotate(-30deg) ; }
+  10% { transform:  translate(6rem) rotate(30deg); }
+  20% { transform:   translate(-6rem) rotate(-30deg); }
+  30% { transform:  translate(2rem) rotate(20deg); }
+  40% { transform:  translate(-0.5rem) rotate(-10deg); }
+  50% { transform: translate(0rem) rotate(0deg); }
+
+  /* shake it off */
+  74% { transform: translate(0rem) rotate(-10deg);}
+  75% { transform: rotate(20deg); }
+  77% { transform: rotate(-30deg); }
+  79% { transform: rotate(30deg); }
+  81% { transform: rotate(-20deg); }
+  83% { transform: rotate(20deg); }
+  85% { transform: rotate(0deg); }
+}
+
+/* unused */
+@keyframes swing {
+ 0% { 
+    transform:  rotate(30deg) translate(-6rem) ;
+  }
+  25% { 
+    transform: rotate(-30deg) translate(6rem);
+  }
+  50% {
+    transform:  rotate(30deg) translate(-6rem) ;
+  }
+  75% {
+    transform: rotate(-30deg) translate(6rem);
+  }
+  100% { transform: rotate(0deg) translate(0rem);
+  }
+}
+
+.shake-and-left {
+  animation-name: shake-and-left;
+  animation-duration: 3s;
+}
+
+.approach-and-left {
+  animation-name: approach-and-left;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+
+@keyframes shake-and-left {
+  0% { transform: translate(-0.75rem); }
+  5% { transform: translate(0.75rem); }
+  10% { transform: translate(-0.75rem); }
+  15% { transform: translate(0.75rem); }
+  20% { transform: translate(-0.75rem); }
+  25% { transform: translate(0.75rem); }
+  30% { transform: translate(-0.75rem); }
+  35% { transform: translate(0.75rem); }
+  40% { transform: translate(-0.75rem); }
+  45% { transform: translate(0.75rem); }
+  50% { transform: translate(-3rem); }
+  100% { transform: translate(0rem); }
+ }
+
+ @keyframes approach-and-left {
+   0% { transform: translate(-20rem); }
+   47% { transform: translate(-6rem); }
+   57% { transform: translate(-50rem); }
+   100% {transform: translate(-50rem); }
+ }
+
+
+/* for testing on the first page */
+ /* h1 {
+  animation: approach-and-left;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+} */

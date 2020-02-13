@@ -3,40 +3,304 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>fullPage.js A simple Demo</title>
+	<title>Anniversary Story</title>
 	<meta name="author" content="Nick Duckwiler" />
 	<meta name="description" content="Anniversary Story" />
-	<meta name="Resource-type" content="Document" />
+  <meta name="Resource-type" content="Document" />
+  
+  <link rel="icon" 
+      type="image/png" 
+      href="assets/fawn-right.png" />
 
   <!-- <link rel="stylesheet" type="text/css" href="../dist/fullpage.css" /> -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 <body>
 
 <div id="fullpage">
 	<div class="section active" id="section0">
-    <h1>fullPage.js</h1>
-    <div class="image-container">
-      <img id="temp" class="animated slideInLeft" data-src="assets/temp.png"  alt="temp1"/>
-      <img id="temp2" class="animated slideInRight" data-src="assets/temp2.png"  alt="temp2"/>
+    <h1>On this day one year ago, a fox and fawn met.</h1>
+    <div class="flex-container">
+      <div class="outer animated invisible">
+        <div class="inner animated">
+          <img class="left fox animated distant" data-src="assets/fox-right.png"  alt="fox-right"/>
+        </div>
+      </div>
+      <div class="outer animated invisible">
+        <div class="inner animated">
+          <img class="right fawn animated distant" data-src="assets/fawn-left.png"  alt="fawn-left"/>
+        </div>
+      </div>
     </div>
   </div>
-	<div class="section" id="section1"><h1>Second</h1></div>
-  <div class="section"><h1>Third</h1></div>
-  <div class="section"><h1>Fourth</h1></div>
-  <div class="section"><h1>Fifth</h1></div>
+	<div class="section" id="section1">
+    <h1>They explored and played and conversed. Soon they formed a partnership.</h1>
+    <div class="flex-container">
+      <div class="outer animated invisible">
+        <div class="inner animated">
+          <img class="left fox animated distant" data-src="assets/fox-right.png"  alt="fox-right"/>
+        </div>
+      </div>
+      <div class="outer animated invisible">
+        <div class="inner animated">
+          <img class="right fawn animated distant" data-src="assets/fawn-left.png"  alt="fawn-left"/>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="section" id="section2">
+    <h1>They traveled, they told each their secrets.<br /> In their jungle home, their partnership grew stronger.</h1>
+    <div class="flex-container">
+      <div class="outer animated invisible">
+        <div class="inner animated">
+          <img class="left fox animated" data-src="assets/fox-right.png"  alt="fox-right"/>
+        </div>
+      </div>
+      <div class="outer animated invisible">
+        <div class="inner animated">
+          <img class="right fawn animated" data-src="assets/fawn-left.png"  alt="fawn-left"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="section" id="section3">
+    <h1>But the jungle wasn't good to them. It was no place for a fox or fawn. <br /> So they agreed to leave the jungle in search of other lands.</h1>
+    <div class="building-container invisible">
+      <div>
+        <img class="skyscraper animated" data-src="assets/skyscraper.png"  alt="skyscraper"/>
+        <!-- <img class="skyscraper animated" data-src="assets/skyscraper.png"  alt="skyscraper"/> -->
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="outer animated">
+        <div class="inner animated">
+          <img class="left fox animated" data-src="assets/fox-right.png"  alt="fox-right"/>
+        </div>
+      </div>
+      <div class="outer animated">
+        <div class="inner animated">
+          <img class="right fawn animated" data-src="assets/fawn-left.png"  alt="fawn-left"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section" id="section4">
+    <h1>The traveled west, all the way to the ocean.<br /> They made their homes there...and soon planned their next adventure.</h1>
+    <div class="top-container animated invisible">
+      <div>
+        <img class="left tree animated" data-src="assets/palm-tree.png"  alt="palm-tree"/>
+      </div>
+      <div class="big-spacer">
+      </div>
+      <div>
+        <img class="right tree animated" data-src="assets/palm-tree.png"  alt="palm-tree"/>
+      </div>
+    </div>
+    <div class="middle-container animated invisible">
+      <div class="outer animated">
+        <div class="inner animated">
+          <img class="left fox animated" data-src="assets/fox-right.png"  alt="fox-right"/>
+        </div>
+      </div>
+      <div class="outer animated">
+        <div class="inner animated">
+          <img class="right fawn animated" data-src="assets/fawn-left.png"  alt="fawn-left"/>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-container animated invisible">
+      <div>
+        <img class="left tree animated" data-src="assets/palm-tree.png"  alt="palm-tree"/>
+      </div>
+      <div>
+        <img class="tree animated" data-src="assets/palm-tree.png"  alt="palm-tree"/>
+      </div>
+      <div>
+        <img class="right tree animated" data-src="assets/palm-tree.png"  alt="palm-tree"/>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.extensions.min.js"></script> -->
 <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/easings.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
 <script type="text/javascript">
 	var myFullpage = new fullpage('#fullpage', {
-    sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+    sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'grey', 'navajowhite'],
     navigation: true,
     navigationPosition: 'right',
+    afterLoad: function(origin, destination, direction) {
+      console.log("afterLoad() called!");
+      console.log(`origin.index: ${origin.index}`)
+      console.log(`destination.index: ${destination.index}`);
 
+      // Opening section
+      if (destination.index == 0) {
+         var $outerDivs = document.querySelectorAll('.section.active .outer');
+         $outerDivs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
+           elem.classList.add('fadeIn');
+           elem.classList.add('slow');
+           if (index == 1) {
+             elem.classList.add('delay-1s');
+           }
+          });
+       }
+
+      // "Soon they formed a partnership" - upon enter
+      if (destination.index == 1) {
+        var $outerDivs = document.querySelectorAll('.section.active .outer');
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
+          elem.classList.add('fadeIn');
+        });
+
+        var $innerDivs = document.querySelectorAll('.section.active .inner');
+        $innerDivs.forEach(function(elem, index) {
+          elem.classList.add('bounce');
+          elem.classList.add('fast');
+          if (index == 1) {
+            elem.classList.add('delay-1s');
+          }
+        });
+
+        var $imgs = document.querySelectorAll('.section.active img');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.add('slideInLeft');
+          if (index == 1) {
+            elem.classList.add('slideInRight')
+            elem.classList.add('delay-1s');
+          }
+        });
+      }
+      
+      // "Soon they formed a partnership" - upon exit
+      if (origin.index == 1) {
+        var $outerDivs = document.querySelectorAll('#section1 .outer');
+        var $innerDivs = document.querySelectorAll('#section1 .inner');
+        var $imgs = document.querySelectorAll('#section1 img');
+
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.add('invisible');
+          elem.classList.remove('fadeIn');
+          
+        });
+
+        $innerDivs.forEach(function(elem, index) {
+          elem.classList.remove('bounce');
+          elem.classList.remove('fast');
+          if (index == 1) {
+            elem.classList.remove('delay-1s');
+          }
+        });
+
+        $imgs.forEach(function(elem, index) {
+          elem.classList.remove('slideInLeft');
+          if (index == 1) {
+            elem.classList.remove('slideInRight')
+            elem.classList.remove('delay-1s');
+          }
+        });
+      }
+
+      // "Traveled..secrets" - upon enter
+      if (destination.index == 2) {
+        var $outerDivs = document.querySelectorAll('.section.active .outer');
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
+          elem.classList.add('fadeIn');
+          elem.classList.add('faster');
+        });
+
+        var $imgs = document.querySelectorAll('.section.active img');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.add('sliding');
+        });
+      }
+
+      // "Traveled...secrets" - upon exit
+      if (origin.index == 2) {
+        var $outerDivs = document.querySelectorAll('#section2 .outer');
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.add('invisible');
+          elem.classList.remove('fadeIn');
+          elem.classList.remove('faster');
+        });
+
+        var $imgs = document.querySelectorAll('#section2 img');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.remove('sliding');
+        });
+      }
+
+      // "leave the city" - upon enter
+      if (destination.index == 3) {
+        var $outerDivs = document.querySelectorAll('.section.active .building-container');
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
+          elem.classList.add('fadeIn');
+          elem.classList.add('faster');
+        });
+
+        var $buildings = document.querySelectorAll('.section.active .building-container img');
+        $buildings.forEach(function(elem, index) {
+          elem.classList.add('approach-and-left');
+        });
+
+        var $imgs = document.querySelectorAll('.section.active .flex-container img');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.add('shake-and-left');
+        });
+      }
+
+      // "leave the city" - upon exit
+      if (origin.index == 3) {
+        var $outerDivs = document.querySelectorAll('#section3 .building-container');
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.add('invisible');
+          elem.classList.remove('fadeIn');
+          elem.classList.remove('faster');
+        });
+
+        var $buildings = document.querySelectorAll('#section3 .building-container img');
+        $buildings.forEach(function(elem, index) {
+          elem.classList.remove('approach-and-left');
+        });
+
+        var $imgs = document.querySelectorAll('#section3 .flex-container img');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.remove('shake-and-left');
+        });
+      }
+
+      // Final - upon enter
+      if (destination.index == 4) {
+        var $divs = document.querySelectorAll('.section .top-container, .section .middle-container, .section .bottom-container');
+        $divs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
+          elem.classList.add('fadeIn');
+          elem.classList.add('fast');
+        });
+
+        var $imgs = document.querySelectorAll('.section.active img.tree');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
+          elem.classList.add('shake');
+          elem.classList.add('slower');
+          elem.classList.add('infinite');
+        });
+
+
+      }
+    }
 	});
 </script>
 </body>
