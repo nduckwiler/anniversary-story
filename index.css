@@ -59,6 +59,10 @@ img {
   width: 12.5%;
 }
 
+div.invisible {
+  opacity: 0%
+}
+
 .flex-container {
   display: flex;
   height: 100%;
@@ -73,3 +77,67 @@ img {
 .flex-container img.right {
   float: left;
 }
+
+img.left.distant {
+  transform: translate(-5rem);
+}
+
+img.left.near {
+  transform: translate(-2rem);
+}
+
+img.right.distant {
+  transform: translate(5rem);
+}
+
+img.right.near {
+  transform: translate(2rem);
+}
+
+.sliding {
+  animation-name: slide-back-and-forth;
+  animation-duration: 3s;
+}
+
+@keyframes slide-back-and-forth {
+  /* swing back and forth */
+  0% { transform:  translate(-6rem) rotate(-30deg) ; }
+  10% { transform:  translate(6rem) rotate(30deg); }
+  20% { transform:   translate(-6rem) rotate(-30deg); }
+  30% { transform:  translate(2rem) rotate(20deg); }
+  40% { transform:  translate(-0.5rem) rotate(-10deg); }
+  50% { transform: translate(0rem) rotate(0deg); }
+
+  /* shake it off */
+  74% { transform: translate(0rem) rotate(-10deg);}
+  75% { transform: rotate(20deg); }
+  77% { transform: rotate(-30deg); }
+  79% { transform: rotate(30deg); }
+  81% { transform: rotate(-20deg); }
+  83% { transform: rotate(20deg); }
+  85% { transform: rotate(0deg); }
+}
+
+/* unused */
+@keyframes swing {
+ 0% { 
+    transform:  rotate(30deg) translate(-6rem) ;
+  }
+  25% { 
+    transform: rotate(-30deg) translate(6rem);
+  }
+  50% {
+    transform:  rotate(30deg) translate(-6rem) ;
+  }
+  75% {
+    transform: rotate(-30deg) translate(6rem);
+  }
+  100% { transform: rotate(0deg) translate(0rem);
+  }
+} 
+
+/* for testing on the first page */
+/* h1 {
+  animation: slide-back-and-forth;
+  animation-duration: 3s;
+} */

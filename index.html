@@ -6,7 +6,11 @@
 	<title>Anniversary Story</title>
 	<meta name="author" content="Nick Duckwiler" />
 	<meta name="description" content="Anniversary Story" />
-	<meta name="Resource-type" content="Document" />
+  <meta name="Resource-type" content="Document" />
+  
+  <link rel="icon" 
+      type="image/png" 
+      href="assets/fawn-right.png" />
 
   <!-- <link rel="stylesheet" type="text/css" href="../dist/fullpage.css" /> -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
@@ -19,14 +23,14 @@
 	<div class="section active" id="section0">
     <h1>fullPage.js</h1>
     <div class="flex-container">
-      <div class="outer animated">
+      <div class="outer animated invisible">
         <div class="inner animated">
-          <img class="left fox animated" data-src="assets/fox-right.png"  alt="fox-right"/>
+          <img class="left fox animated distant" data-src="assets/fox-right.png"  alt="fox-right"/>
         </div>
       </div>
-      <div class="outer animated">
+      <div class="outer animated invisible">
         <div class="inner animated">
-          <img class="right fawn animated" data-src="assets/fawn-left.png"  alt="fawn-left"/>
+          <img class="right fawn animated distant" data-src="assets/fawn-left.png"  alt="fawn-left"/>
         </div>
       </div>
     </div>
@@ -34,14 +38,14 @@
 	<div class="section" id="section1">
     <h1>Second</h1>
     <div class="flex-container">
-      <div class="outer animated">
+      <div class="outer animated invisible">
         <div class="inner animated">
-          <img class="left fox animated" data-src="assets/fox-right.png"  alt="fox-right"/>
+          <img class="left fox animated distant" data-src="assets/fox-right.png"  alt="fox-right"/>
         </div>
       </div>
-      <div class="outer animated">
+      <div class="outer animated invisible">
         <div class="inner animated">
-          <img class="right fawn animated" data-src="assets/fawn-left.png"  alt="fawn-left"/>
+          <img class="right fawn animated distant" data-src="assets/fawn-left.png"  alt="fawn-left"/>
         </div>
       </div>
     </div> 
@@ -49,12 +53,12 @@
   <div class="section" id="section2">
     <h1>Third</h1>
     <div class="flex-container">
-      <div class="outer animated">
+      <div class="outer animated invisible">
         <div class="inner animated">
           <img class="left fox animated" data-src="assets/fox-right.png"  alt="fox-right"/>
         </div>
       </div>
-      <div class="outer animated">
+      <div class="outer animated invisible">
         <div class="inner animated">
           <img class="right fawn animated" data-src="assets/fawn-left.png"  alt="fawn-left"/>
         </div>
@@ -110,25 +114,90 @@
       console.log("afterLoad() called!");
       console.log(`origin.index: ${origin.index}`)
       console.log(`destination.index: ${destination.index}`);
- 
-      if( destination.index == 1 ) {
-        var $outerDivs = document.querySelectorAll('.section.active .outer');
-       }
 
-       if (destination.index == 4) {
+      // Opening section
+      if (destination.index == 0) {
          var $outerDivs = document.querySelectorAll('.section.active .outer');
-         console.log('elements:')
          $outerDivs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
            elem.classList.add('fadeIn');
-         });
+           elem.classList.add('slow');
+           if (index == 1) {
+             elem.classList.add('delay-1s');
+           }
+          });
        }
 
-       if (origin.index == 4) {
-         var $outerDivs = document.querySelectorAll('#section4 .outer');
-         $outerDivs.forEach(function(elem, index) {
-           elem.classList.remove('fadeIn');
-         })
-       }
+      // "Soon they formed a partnership" - upon enter
+      if (destination.index == 1) {
+        var $outerDivs = document.querySelectorAll('.section.active .outer');
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
+          elem.classList.add('fadeIn');
+        });
+
+        var $innerDivs = document.querySelectorAll('.section.active .inner');
+        $innerDivs.forEach(function(elem, index) {
+          elem.classList.add('bounce');
+          elem.classList.add('fast');
+          if (index == 1) {
+            elem.classList.add('delay-1s');
+          }
+        });
+
+        var $imgs = document.querySelectorAll('.section.active img');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.add('slideInLeft');
+          if (index == 1) {
+            elem.classList.add('slideInRight')
+            elem.classList.add('delay-1s');
+          }
+        });
+      }
+      
+      // "Soon they formed a partnership" - upon exit
+      if (origin.index == 1) {
+        var $outerDivs = document.querySelectorAll('#section1 .outer');
+        var $innerDivs = document.querySelectorAll('#section1 .inner');
+        var $imgs = document.querySelectorAll('#section1 img');
+
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.add('invisible');
+          elem.classList.remove('fadeIn');
+          
+        });
+
+        $innerDivs.forEach(function(elem, index) {
+          elem.classList.remove('bounce');
+          elem.classList.remove('fast');
+          if (index == 1) {
+            elem.classList.remove('delay-1s');
+          }
+        });
+
+        $imgs.forEach(function(elem, index) {
+          elem.classList.remove('slideInLeft');
+          if (index == 1) {
+            elem.classList.remove('slideInRight')
+            elem.classList.remove('delay-1s');
+          }
+        });
+      }
+
+      // "Traveled..secrets" - upon enter
+      if (destination.index == 2) {
+        var $outerDivs = document.querySelectorAll('.section.active .outer');
+        $outerDivs.forEach(function(elem, index) {
+          elem.classList.remove('invisible');
+          elem.classList.add('fadeIn');
+          elem.classList.add('faster');
+        });
+
+        var $imgs = document.querySelectorAll('.section.active img');
+        $imgs.forEach(function(elem, index) {
+          elem.classList.add('sliding');
+        });
+      }
     }
 	});
 </script>
