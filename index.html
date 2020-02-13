@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js A simple Demo</title>
+	<meta name="author" content="Nick Duckwiler" />
+	<meta name="description" content="Anniversary Story" />
+	<meta name="Resource-type" content="Document" />
+
+  <!-- <link rel="stylesheet" type="text/css" href="../dist/fullpage.css" /> -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+	<link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<body>
+
+<div id="fullpage">
+	<div class="section active" id="section0">
+    <h1>fullPage.js</h1>
+    <div class="image-container">
+      <img id="temp" class="animated slideInLeft" data-src="assets/temp.png"  alt="temp1"/>
+      <img id="temp2" class="animated slideInRight" data-src="assets/temp2.png"  alt="temp2"/>
+    </div>
+  </div>
+	<div class="section" id="section1"><h1>Second</h1></div>
+  <div class="section"><h1>Third</h1></div>
+  <div class="section"><h1>Fourth</h1></div>
+  <div class="section"><h1>Fifth</h1></div>
+</div>
+
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.extensions.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/easings.min.js"></script> -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
+<script type="text/javascript">
+	var myFullpage = new fullpage('#fullpage', {
+    sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+    navigation: true,
+    navigationPosition: 'right',
+
+	});
+</script>
+</body>
+</html>
